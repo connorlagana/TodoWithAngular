@@ -7,6 +7,7 @@ export class TodoService {
 
   constructor() { }
 
+  //we want to fetch from axios or somewhere else
   getTodos() {
     return [
       {
