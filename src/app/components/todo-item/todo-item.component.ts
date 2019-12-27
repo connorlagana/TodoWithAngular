@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Todo } from 'src/app/models/Todo';
 
 @Component({
   selector: 'app-todo-item',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoItemComponent implements OnInit {
 
+  @Input() todo: Todo
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  //Set dynamic classes
+  setClasses() {
+    let classes = {
+      todo: true,
+      'is-complete': this.todo.completed
+    }
+
+    return classes
   }
 
 }

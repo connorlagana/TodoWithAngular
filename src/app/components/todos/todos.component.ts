@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../../models/Todo'
+
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
@@ -9,7 +10,6 @@ export class TodosComponent implements OnInit {
   //we have to create a model of what Todo looks like
   todos: Todo[]
 
-
   constructor() { }
 
   ngOnInit() {
@@ -17,7 +17,7 @@ export class TodosComponent implements OnInit {
       {
         id: 1,
         title: "Todo one",
-        completed: false
+        completed: true
       },
       {
         id: 2,
